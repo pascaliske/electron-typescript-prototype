@@ -1,0 +1,18 @@
+# system files
+.DS_Store
+Thumbs.db
+
+# ide and editors
+.idea
+.vscode
+.settings
+
+# errors and logs
+*.log
+
+# dependencies
+node_modules
+
+# compiled output
+dist
+build
