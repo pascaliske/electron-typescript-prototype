@@ -39,7 +39,7 @@
   "devDependencies": {
     "@commitlint/cli": "^7.5.0",
     "@commitlint/config-conventional": "^7.5.0",
-    "@types/lodash-es": "^4.17.1",
+    "@types/lodash-es": "^4.17.3",
     "@types/node": "^10.12.21",
     "@types/webpack": "^4.4.24",
     "clean-webpack-plugin": "^1.0.1",
