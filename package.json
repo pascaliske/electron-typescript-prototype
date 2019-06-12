@@ -41,7 +41,7 @@
     "@commitlint/config-conventional": "^7.5.0",
     "@types/lodash-es": "^4.17.3",
     "@types/node": "^10.12.21",
-    "@types/webpack": "^4.4.24",
+    "@types/webpack": "^4.4.32",
     "clean-webpack-plugin": "^1.0.1",
     "copy-webpack-plugin": "^4.6.0",
     "electron-packager": "^13.0.1",
