@@ -60,7 +60,7 @@
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.5.2",
     "webpack": "^4.34.0",
-    "webpack-cli": "^3.2.1",
+    "webpack-cli": "^3.3.4",
     "webpack-visualizer-plugin": "^0.1.11"
   }
 }
