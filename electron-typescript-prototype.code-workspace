@@ -10,6 +10,8 @@
         "tslint.autoFixOnSave": true,
         "prettier.ignorePath": ".prettierignore",
         "typescript.tsdk": "node_modules/typescript/lib",
+        "python.pythonPath": ".venv/bin/python3",
+        "python.formatting.autopep8Path": ".venv/bin/autopep8",
         "cSpell.words": [
             "devtool",
             "typedi"

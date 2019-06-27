@@ -5,6 +5,7 @@ Thumbs.db
 # ide and editors
 .idea
 .vscode
+.venv
 .settings
 
 # errors and logs
