@@ -183,10 +183,10 @@
     mkdirp "^0.5.1"
     rimraf "^2.5.2"
 
-"@pascaliske/tsconfig@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@pascaliske/tsconfig/-/tsconfig-1.0.2.tgz#ffad551442bfac969963ecddccb34e7af8b201c1"
-  integrity sha512-aJigmmrJ8yd3iZSPndqqoSX8ZNpR5hqvx6GkIALRsfY6pD3si4UcGUl05E3vgJHC2JohuvielRzq6NiYZmKckA==
+"@pascaliske/tsconfig@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@pascaliske/tsconfig/-/tsconfig-1.0.3.tgz#c74eaf0185e2f8e1efd19fcaaed4c29c193c3e25"
+  integrity sha512-8PzczyxdwruA0dQ/Xra4mPioNO1aoyTVjzyJoDUVxVGU3QQ1egTburIM0OFgNhXqOSGQLnVnRfRmTtVMIud9qw==
 
 "@phenomnomnominal/tsquery@^3.0.0":
   version "3.0.0"
