@@ -10,5 +10,5 @@ update_configs:
       include_scope: true
     automerged_updates:
       - match:
-        dependency_type: "all"
-        update_type: "semver:minor"
+          dependency_type: "all"
+          update_type: "semver:minor"
