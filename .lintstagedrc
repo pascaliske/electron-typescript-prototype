@@ -1,14 +1,11 @@
 {
-  "relative": true,
-  "linters": {
-    "src/**/*.ts": [
-      "tslint --project tsconfig.json --fix",
-      "prettier --config .prettierrc --write",
-      "git add"
-    ],
-    "src/**/*.{scss,html,md}": [
-      "prettier --config .prettierrc --write",
-      "git add"
-    ]
-  }
+  "src/**/*.ts": [
+    "tslint --project tsconfig.json --fix",
+    "prettier --config .prettierrc --write",
+    "git add"
+  ],
+  "src/**/*.{scss,html,md}": [
+    "prettier --config .prettierrc --write",
+    "git add"
+  ]
 }
