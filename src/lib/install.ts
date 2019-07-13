@@ -12,15 +12,15 @@ export function checkDestination(): Observable<boolean> {
         return of(true)
     }
 
-    const confirm = (): Promise<boolean> => {
-        return Container.get(Dialog).confirm({
+    const confirmation: Observable<boolean> = from(
+        Container.get(Dialog).confirm({
             type: 'info',
             message: 'Not inside of the Applications folder.',
             buttons: ['Move', 'Cancel'],
-        })
-    }
+        }),
+    )
 
-    return from(confirm()).pipe(
+    return confirmation.pipe(
         concatMap(confirmed => {
             if (confirmed) {
                 app.moveToApplicationsFolder()
