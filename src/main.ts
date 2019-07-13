@@ -9,6 +9,18 @@ import { Application } from './lib/application'
 Container.get(Application).ready$.subscribe((window: BrowserWindow) => {
     if (ENVIRONMENT === 'development') {
         console.log('==>', VERSION, ENVIRONMENT)
-        window.webContents.openDevTools()
+
+        window.webContents.openDevTools({
+            mode: 'detach',
+        })
+    }
+})
+
+/**
+ * Safely shut down.
+ */
+Container.get(Application).quit$.subscribe(() => {
+    if (ENVIRONMENT === 'development') {
+        console.log('==> quit')
     }
 })
