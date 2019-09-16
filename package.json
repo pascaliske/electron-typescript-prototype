@@ -54,7 +54,7 @@
     "rxjs-tslint-rules": "^4.25.0",
     "snyk": "^1.227.0",
     "standard-changelog": "^2.0.13",
-    "terser-webpack-plugin": "^2.0.1",
+    "terser-webpack-plugin": "^2.1.0",
     "ts-loader": "^6.1.0",
     "ts-node": "^8.4.1",
     "tslint": "^5.20.0",
