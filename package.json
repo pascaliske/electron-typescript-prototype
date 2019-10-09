@@ -53,7 +53,7 @@
     "prettier": "^1.18.2",
     "rxjs-tslint-rules": "^4.25.0",
     "snyk": "^1.234.0",
-    "standard-changelog": "^2.0.13",
+    "standard-changelog": "^2.0.15",
     "terser-webpack-plugin": "^2.1.2",
     "ts-loader": "^6.2.0",
     "ts-node": "^8.4.1",
