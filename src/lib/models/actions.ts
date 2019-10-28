@@ -6,4 +6,5 @@ export const enum Actions {
     WINDOW_HIDE = 'hide',
     WINDOW_SHOW = 'show',
     OPEN_URL = 'open-url',
+    OPEN_PREFERENCES = 'open-preferences',
 }
