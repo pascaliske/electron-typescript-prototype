@@ -1,4 +1,4 @@
-import { app, Event, BrowserWindow } from 'electron'
+import { app, shell, Event, BrowserWindow } from 'electron'
 import { Container, Service } from 'typedi'
 import { Observable, fromEvent } from 'rxjs'
 import { first, takeUntil, concatMap, tap } from 'rxjs/operators'

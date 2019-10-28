@@ -18,23 +18,19 @@ export class Dialog {
     /**
      *
      */
-    public confirm(options: DialogOptions): Promise<boolean> {
-        return new Promise((resolve, reject) => {
-            try {
-                if (options.window) {
-                    const { window } = pick(options, ['window'])
+    public async confirm(options: DialogOptions): Promise<boolean> {
+        try {
+            if (options.window) {
+                const { window } = pick(options, ['window'])
+                const index = await dialog.showMessageBox(window, omit(options, ['window']))
 
-                    dialog.showMessageBox(window, omit(options, ['window']), index => {
-                        resolve(index === 0)
-                    })
-                } else {
-                    dialog.showMessageBox(omit(options, ['window']), index => {
-                        resolve(index === 0)
-                    })
-                }
-            } catch (error) {
-                reject(error)
+                return index.response === 0
+            } else {
+                const index = await dialog.showMessageBox(omit(options, ['window']))
+                return index.response === 0
             }
-        })
+        } catch (error) {
+            throw error
+        }
     }
 }

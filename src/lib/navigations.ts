@@ -36,7 +36,7 @@ export class Navigations {
                 {
                     label: 'Preferences...',
                     accelerator: Shortcuts.SETTINGS,
-                    click: () => this.dispatcher.dispatch(Actions.PREFERENCES_OPEN),
+                    click: () => this.dispatcher.dispatch(Actions.OPEN_PREFERENCES),
                 },
             ]),
             {
