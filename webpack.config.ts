@@ -1,6 +1,6 @@
 import { join } from 'path'
 import { Configuration, DefinePlugin } from 'webpack'
-import CleanWebpackPlugin from 'clean-webpack-plugin'
+import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 import GenerateJsonWebpackPlugin from 'generate-json-webpack-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import CopyWebpackPlugin from 'copy-webpack-plugin'
@@ -31,7 +31,7 @@ const metadata = {
  */
 export default (_, argv: any): Configuration => ({
     mode: 'production',
-    target: 'electron-renderer',
+    target: 'electron-main',
     devtool: 'source-map',
     entry: {
         main: join(__dirname, 'src', 'main.ts'),
@@ -41,8 +41,11 @@ export default (_, argv: any): Configuration => ({
         rules: [
             {
                 test: /\.tsx?$/,
-                use: 'ts-loader',
+                loader: 'ts-loader',
                 exclude: /node_modules/,
+                options: {
+                    configFile: 'tsconfig.app.json',
+                },
             },
         ],
     },
@@ -56,9 +59,8 @@ export default (_, argv: any): Configuration => ({
             REPOSITORY: JSON.stringify(repository.url),
             APP_NAME: JSON.stringify(app.name),
         }),
-        new CleanWebpackPlugin(['dist', 'build'], {
-            beforeEmit: true,
-            verbose: false,
+        new CleanWebpackPlugin({
+            cleanAfterEveryBuildPatterns: ['dist', 'build'],
         }),
         new GenerateJsonWebpackPlugin('package.json', metadata, null, 2),
         new HtmlWebpackPlugin({
