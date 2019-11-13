@@ -30,7 +30,7 @@
   "private": true,
   "dependencies": {
     "electron": "^7.1.1",
-    "electron-util": "^0.12.2",
+    "electron-util": "^0.12.3",
     "lodash-es": "^4.17.15",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^6.5.3",

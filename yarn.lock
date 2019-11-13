@@ -2280,10 +2280,10 @@ electron-packager@^14.1.0:
     semver "^6.0.0"
     yargs-parser "^16.0.0"
 
-electron-util@^0.12.2:
-  version "0.12.2"
-  resolved "https://registry.yarnpkg.com/electron-util/-/electron-util-0.12.2.tgz#ab03458459a3354fc2ea0e22ede714f291c0896d"
-  integrity sha512-AG96dy4o7jgsTmiHwps/CGRzQDbeZYDqxxBprbEwcK0Ao15njIAsZQfcMEPid6D6Mdix+T/Pjs5hxoYPkjKscg==
+electron-util@^0.12.3:
+  version "0.12.3"
+  resolved "https://registry.yarnpkg.com/electron-util/-/electron-util-0.12.3.tgz#e2c0059b4109b512542d66261888c2beb2fc2b29"
+  integrity sha512-6Vq8UzUFcwghVpXazIY4cD5TkTvqXOTvJpzsoeiQY051Twdwu6ofHHP/shEFkpxf8X81M6F8/cdeoT+2XYpTBg==
   dependencies:
     electron-is-dev "^1.1.0"
     new-github-issue-url "^0.2.1"
