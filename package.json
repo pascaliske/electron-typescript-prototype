@@ -52,7 +52,7 @@
     "lint-staged": "^9.4.3",
     "prettier": "^1.19.1",
     "rxjs-tslint-rules": "^4.26.3",
-    "snyk": "^1.248.0",
+    "snyk": "^1.249.0",
     "standard-changelog": "^2.0.18",
     "terser-webpack-plugin": "^2.2.1",
     "ts-loader": "^6.2.1",
