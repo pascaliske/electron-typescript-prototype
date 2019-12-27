@@ -33,7 +33,7 @@
     "electron-util": "^0.13.1",
     "lodash-es": "^4.17.15",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^6.5.3",
+    "rxjs": "^6.5.4",
     "typedi": "^0.8.0"
   },
   "devDependencies": {
