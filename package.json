@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
-    "@commitlint/config-conventional": "^8.2.0",
+    "@commitlint/config-conventional": "^8.3.3",
     "@pascaliske/tsconfig": "^1.0.4",
     "@types/lodash-es": "^4.17.3",
     "@types/node": "^13.1.2",
