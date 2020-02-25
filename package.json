@@ -49,7 +49,7 @@
     "generate-json-webpack-plugin": "^0.3.1",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^4.2.3",
-    "lint-staged": "^10.0.7",
+    "lint-staged": "^10.0.8",
     "prettier": "^1.19.1",
     "rxjs-tslint-rules": "^4.29.0",
     "snyk": "^1.297.1",
