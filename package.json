@@ -51,7 +51,7 @@
     "husky": "^4.2.3",
     "lint-staged": "^10.0.8",
     "prettier": "^1.19.1",
-    "rxjs-tslint-rules": "^4.29.1",
+    "rxjs-tslint-rules": "^4.29.2",
     "snyk": "^1.300.0",
     "standard-changelog": "^2.0.21",
     "terser-webpack-plugin": "^2.3.5",
