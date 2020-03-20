@@ -1,9 +1,8 @@
-import { Service, Inject } from 'typedi'
+import { Service } from 'typedi'
 import { ipcMain, ipcRenderer } from 'electron'
 import { Observable, Subject } from 'rxjs'
 import { filter, map } from 'rxjs/operators'
 import { Actions } from 'models/actions'
-import { IS_RENDERER } from '../../tokens'
 
 /**
  *
@@ -18,7 +17,7 @@ export class Dispatcher {
     /**
      * Init dispatcher service and connect ipc communication.
      */
-    public constructor(@Inject(IS_RENDERER) private isRenderer: () => boolean) {
+    public constructor() {
         if (!this.isRenderer()) {
             ipcMain.on('actions', (_, [type, payload]: [Actions, any?]) => {
                 this.stream$.next({ type, payload })
@@ -58,5 +57,12 @@ export class Dispatcher {
      */
     public shutdown(): void {
         this.stream$.complete()
+    }
+
+    /**
+     * Checks if script is currently ran in renderer process.
+     */
+    private isRenderer(): boolean {
+        return require('is-electron-renderer')
     }
 }
