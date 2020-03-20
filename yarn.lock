@@ -187,6 +187,11 @@
     mkdirp "^0.5.1"
     rimraf "^2.5.2"
 
+"@pascaliske/prettier-config@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@pascaliske/prettier-config/-/prettier-config-1.0.2.tgz#48a5ab00cef5fb9a67a8e56e055f2bee322af4bd"
+  integrity sha512-tzC/OF5P+C6QREYIjvkB/CrEVG8cVC7MLAybH9bmGJjJfD9hz1UWfVw18OvDbU7wuGqKhQNMVIcJKQW4TiEE0w==
+
 "@pascaliske/tsconfig@^1.0.4":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@pascaliske/tsconfig/-/tsconfig-1.0.4.tgz#4d98f5b69e5682a34da0a328e2966c52cd5b2cd2"

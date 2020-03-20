@@ -20,7 +20,7 @@
     "package": "yarn run build --mode production && electron-packager dist --out build --ignore stats.html --asar --darwin-dark-mode-support",
     "build": "webpack --config webpack.config.ts --progress",
     "lint": "tslint --project tsconfig.json --fix",
-    "format": "prettier --config .prettierrc --write \"src/**/*.{ts,scss,html,md}\"",
+    "format": "prettier --write \"**/*.{ts,scss,html,json,md}\"",
     "changelog": "standard-changelog --release-count 1",
     "check": "snyk test"
   },
@@ -28,6 +28,7 @@
     "name": "Prototype"
   },
   "private": true,
+  "prettier": "@pascaliske/prettier-config",
   "dependencies": {
     "electron": "^8.1.1",
     "electron-util": "^0.14.0",
@@ -39,6 +40,7 @@
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
+    "@pascaliske/prettier-config": "^1.0.2",
     "@pascaliske/tsconfig": "^1.0.4",
     "@types/lodash-es": "^4.17.3",
     "@types/node": "^13.9.2",
