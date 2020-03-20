@@ -1,25 +1,30 @@
-import { Service } from 'typedi'
+import { Service, Inject } from 'typedi'
+import { ipcMain, ipcRenderer } from 'electron'
 import { Observable, Subject } from 'rxjs'
 import { filter, map } from 'rxjs/operators'
 import { Actions } from 'models/actions'
+import { IS_RENDERER } from '../../tokens'
 
 /**
  *
  */
-interface Action<P = any> {
-    type: Actions
-    payload: P
-}
-
-/**
- *
- */
-@Service()
+@Service({ global: true })
 export class Dispatcher {
     /**
-     *
+     * Internal queue for dispatched actions.
      */
-    private stream$: Subject<Action> = new Subject()
+    private stream$: Subject<{ type: Actions; payload: any }> = new Subject()
+
+    /**
+     * Init dispatcher service and connect ipc communication.
+     */
+    public constructor(@Inject(IS_RENDERER) private isRenderer: () => boolean) {
+        if (!this.isRenderer()) {
+            ipcMain.on('actions', (_, [type, payload]: [Actions, any?]) => {
+                this.stream$.next({ type, payload })
+            })
+        }
+    }
 
     /**
      * Dispatch an action.
@@ -27,8 +32,12 @@ export class Dispatcher {
      * @param type - The action type
      * @param payload - Optional payload for the dispatched action
      */
-    public dispatch<P = any>(type: Actions, payload?: P): void {
-        this.stream$.next({ type, payload })
+    public dispatch<A extends Actions, P = any>(type: A, payload?: P): void {
+        if (this.isRenderer()) {
+            ipcRenderer.send('actions', [type, ...(payload ? [payload] : [])])
+        } else {
+            this.stream$.next({ type, payload })
+        }
     }
 
     /**
@@ -37,7 +46,7 @@ export class Dispatcher {
      * @param type - The action type to watch for
      * @returns - An {@link Observable} with all events for the given action type
      */
-    public watch(type: Actions): Observable<any> {
+    public watch<A extends Actions, P = any>(type: A): Observable<P> {
         return this.stream$.pipe(
             filter(event => event.type === type),
             map(event => event.payload),
