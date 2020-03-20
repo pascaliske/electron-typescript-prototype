@@ -17,7 +17,7 @@
   },
   "scripts": {
     "start": "yarn run build --mode development && electron dist",
-    "package": "yarn run build --mode production && electron-packager dist --out build --ignore stats.html --asar --darwin-dark-mode-support",
+    "package": "yarn run build --mode production && electron-packager dist --out build --ignore stats.html --asar --darwin-dark-mode-support --overwrite",
     "build": "webpack --config webpack.config.ts --progress",
     "lint": "tslint --project tsconfig.json --fix",
     "format": "prettier --write \"**/*.{ts,scss,html,json,md}\"",
