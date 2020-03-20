@@ -2,6 +2,7 @@ import { Service } from 'typedi'
 import { Notification, NotificationConstructorOptions, Event } from 'electron'
 import { Observable, fromEvent } from 'rxjs'
 
+export type NotificationOptions = Omit<NotificationConstructorOptions, 'title'>
 export interface NotificationActions {
     show$: Observable<Event>
     close$: Observable<Event>
@@ -21,7 +22,7 @@ export class Notifications {
      *
      * @param body - The body for the notification
      */
-    public send(options: NotificationConstructorOptions): NotificationActions {
+    public send(options: NotificationOptions): NotificationActions {
         const notification = new Notification({ ...options, title: APP_NAME })
 
         notification.show()
