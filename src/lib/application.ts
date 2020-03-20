@@ -1,5 +1,5 @@
 import { app, shell, Event, BrowserWindow } from 'electron'
-import { Container, Service } from 'typedi'
+import { Service } from 'typedi'
 import { Observable, fromEvent } from 'rxjs'
 import { first, takeUntil, concatMap, tap } from 'rxjs/operators'
 import { checkDestination } from './install'
@@ -16,7 +16,7 @@ export class Application {
     /**
      *
      */
-    public constructor(private dispatcher: Dispatcher) {}
+    public constructor(private dispatcher: Dispatcher, private navigations: Navigations) {}
 
     /**
      * Lifecycle {@link Observable} for the "quit" event.
@@ -43,12 +43,12 @@ export class Application {
             concatMap(() => checkDestination()),
             concatMap(() => createWindow()),
             tap(window => {
-                Container.get(Navigations).setup()
-
                 this.dispatcher.watch(Actions.APP_QUIT).subscribe(() => app.quit())
                 this.dispatcher.watch(Actions.WINDOW_HIDE).subscribe(() => window.hide())
                 this.dispatcher.watch(Actions.WINDOW_SHOW).subscribe(() => window.show())
                 this.dispatcher.watch(Actions.OPEN_URL).subscribe(url => shell.openExternal(url))
+
+                this.navigations.setup()
 
                 fromEvent<Event>(app, 'window-all-closed')
                     .pipe(takeUntil(this.quit$))
