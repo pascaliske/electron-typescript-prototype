@@ -1,6 +1,7 @@
 import { join } from 'path'
 import { Configuration, DefinePlugin } from 'webpack'
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
+import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin'
 import GenerateJsonWebpackPlugin from 'generate-json-webpack-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import CopyWebpackPlugin from 'copy-webpack-plugin'
@@ -51,6 +52,7 @@ export default (_, argv: any): Configuration => ({
     },
     resolve: {
         extensions: ['.ts', '.js'],
+        plugins: [new TsconfigPathsPlugin()],
     },
     plugins: [
         new DefinePlugin({
