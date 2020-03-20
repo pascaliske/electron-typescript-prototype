@@ -1,18 +1,16 @@
 import 'reflect-metadata'
-import { BrowserWindow } from 'electron'
 import { Container } from 'typedi'
+import { BrowserWindow } from 'electron'
 import { Application } from './lib/application'
 
 /**
  * Startup.
  */
 Container.get(Application).ready$.subscribe((window: BrowserWindow) => {
-    if (ENVIRONMENT === 'development') {
-        console.log('==>', VERSION, ENVIRONMENT)
+    console.log(VERSION)
 
-        window.webContents.openDevTools({
-            mode: 'detach',
-        })
+    if (ENVIRONMENT === 'development') {
+        window.webContents.openDevTools({ mode: 'detach', activate: true })
     }
 })
 

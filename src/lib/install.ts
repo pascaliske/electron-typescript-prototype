@@ -1,14 +1,14 @@
-import { app } from 'electron'
 import { Container } from 'typedi'
+import { app } from 'electron'
 import { Observable, from, of, EMPTY } from 'rxjs'
 import { concatMap } from 'rxjs/operators'
-import { Dialog } from './dialog'
+import { Dialog } from 'services/dialog'
 
 /**
  *
  */
 export function checkDestination(): Observable<boolean> {
-    if (app.isInApplicationsFolder() || ENVIRONMENT === 'development') {
+    if (ENVIRONMENT !== 'production' || app.isInApplicationsFolder()) {
         return of(true)
     }
 

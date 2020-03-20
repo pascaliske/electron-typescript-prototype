@@ -1,12 +1,12 @@
-import { app, shell, Event, BrowserWindow } from 'electron'
 import { Service } from 'typedi'
+import { app, shell, Event, BrowserWindow } from 'electron'
 import { Observable, fromEvent } from 'rxjs'
 import { first, takeUntil, concatMap, tap } from 'rxjs/operators'
+import { Actions } from 'models/actions'
+import { Dispatcher } from 'services/dispatcher'
+import { Navigations } from 'services/navigations'
 import { checkDestination } from './install'
 import { createWindow } from './window'
-import { Actions } from './models/actions'
-import { Dispatcher } from './dispatcher'
-import { Navigations } from './navigations'
 
 /**
  * Application lifecycle service.

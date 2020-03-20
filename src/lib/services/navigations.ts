@@ -1,9 +1,9 @@
+import { Service } from 'typedi'
 import { Menu } from 'electron'
 import { appMenu } from 'electron-util'
-import { Service } from 'typedi'
-import { Shortcuts } from './models/shortcuts'
-import { Actions } from './models/actions'
-import { Dispatcher } from './dispatcher'
+import { Shortcuts } from 'models/shortcuts'
+import { Actions } from 'models/actions'
+import { Dispatcher } from 'services/dispatcher'
 
 /**
  *

@@ -1,5 +1,5 @@
-import { Notification, NotificationConstructorOptions, Event } from 'electron'
 import { Service } from 'typedi'
+import { Notification, NotificationConstructorOptions, Event } from 'electron'
 import { Observable, fromEvent } from 'rxjs'
 
 export interface NotificationActions {

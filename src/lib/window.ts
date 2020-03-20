@@ -1,5 +1,5 @@
-import { BrowserWindow } from 'electron'
 import { Container } from 'typedi'
+import { BrowserWindow } from 'electron'
 import { Observable } from 'rxjs'
 
 /**

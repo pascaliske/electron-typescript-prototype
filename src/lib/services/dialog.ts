@@ -1,5 +1,5 @@
-import { BrowserWindow, dialog, MessageBoxOptions } from 'electron'
 import { Service } from 'typedi'
+import { BrowserWindow, dialog, MessageBoxOptions } from 'electron'
 import pick from 'lodash-es/pick'
 import omit from 'lodash-es/omit'
 

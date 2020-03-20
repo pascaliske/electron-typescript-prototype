@@ -1,7 +1,7 @@
 import { Service } from 'typedi'
 import { Observable, Subject } from 'rxjs'
 import { filter, map } from 'rxjs/operators'
-import { Actions } from './models/actions'
+import { Actions } from 'models/actions'
 
 /**
  *

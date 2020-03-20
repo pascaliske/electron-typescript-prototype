@@ -1,10 +1,17 @@
 {
   "extends": "@pascaliske/tsconfig",
   "compilerOptions": {
+    "baseUrl": ".",
     "module": "commonjs",
     "outDir": "dist",
     "declaration": false,
     "typeRoots": ["node_modules/@types"],
-    "lib": ["esnext", "dom"]
+    "lib": ["esnext", "dom"],
+    "paths": {
+      "models": ["src/lib/models"],
+      "models/*": ["src/lib/models/*"],
+      "services": ["src/lib/services"],
+      "services/*": ["src/lib/services/*"]
+    }
   }
 }
