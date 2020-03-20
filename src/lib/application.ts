@@ -4,6 +4,7 @@ import { Observable, fromEvent } from 'rxjs'
 import { first, takeUntil, concatMap, tap } from 'rxjs/operators'
 import { Actions } from 'models/actions'
 import { Dispatcher } from 'services/dispatcher'
+import { Notifications } from 'services/notifications'
 import { Navigations } from 'services/navigations'
 import { checkDestination } from './install'
 import { createWindow } from './window'
@@ -16,7 +17,11 @@ export class Application {
     /**
      *
      */
-    public constructor(private dispatcher: Dispatcher, private navigations: Navigations) {}
+    public constructor(
+        private dispatcher: Dispatcher,
+        private notifications: Notifications,
+        private navigations: Navigations,
+    ) {}
 
     /**
      * Lifecycle {@link Observable} for the "quit" event.
@@ -47,6 +52,9 @@ export class Application {
                 this.dispatcher.watch(Actions.WINDOW_HIDE).subscribe(() => window.hide())
                 this.dispatcher.watch(Actions.WINDOW_SHOW).subscribe(() => window.show())
                 this.dispatcher.watch(Actions.OPEN_URL).subscribe(url => shell.openExternal(url))
+                this.dispatcher.watch(Actions.NOTIFICATION).subscribe(notification => {
+                    this.notifications.send(notification)
+                })
 
                 this.navigations.setup()
 
