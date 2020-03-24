@@ -55,7 +55,7 @@
     "lint-staged": "^10.0.9",
     "prettier": "^2.0.2",
     "rxjs-tslint-rules": "^4.29.2",
-    "snyk": "^1.303.2",
+    "snyk": "^1.304.0",
     "standard-changelog": "^2.0.21",
     "terser-webpack-plugin": "^2.3.5",
     "ts-loader": "^6.2.2",
