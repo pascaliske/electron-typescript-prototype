@@ -29,7 +29,7 @@
   "private": true,
   "prettier": "@pascaliske/prettier-config",
   "dependencies": {
-    "electron": "^9.0.0",
+    "electron": "^9.0.1",
     "electron-util": "^0.14.1",
     "is-electron-renderer": "^2.0.1",
     "lodash-es": "^4.17.15",
