@@ -32,7 +32,7 @@
     "electron": "^11.1.0",
     "electron-util": "^0.14.2",
     "is-electron-renderer": "^2.0.1",
-    "lodash-es": "^4.17.15",
+    "lodash-es": "^4.17.20",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^6.6.3",
     "typedi": "^0.8.0"
