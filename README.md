@@ -1,6 +1,6 @@
 # Electron TypeScript Prototype
 
-[![GitHub Tag](https://img.shields.io/github/tag/pascaliske/electron-typescript-prototype.svg?style=flat-square)](https://github.com/pascaliske/electron-typescript-prototype) [![Travis CI](https://img.shields.io/travis/com/pascaliske/electron-typescript-prototype/master.svg?style=flat-square)](https://travis-ci.com/pascaliske/electron-typescript-prototype) [![Awesome Badges](https://img.shields.io/badge/badges-awesome-green.svg?style=flat-square)](https://github.com/Naereen/badges)
+[![GitHub Tag](https://img.shields.io/github/tag/pascaliske/electron-typescript-prototype.svg?style=flat-square)](https://github.com/pascaliske/electron-typescript-prototype) [![Build Status](https://img.shields.io/github/workflow/status/pascaliske/electron-typescript-prototype/Build%20app/master?label=build&style=flat-square)](https://github.com/pascaliske/electron-typescript-prototype/actions) [![Awesome Badges](https://img.shields.io/badge/badges-awesome-green.svg?style=flat-square)](https://github.com/Naereen/badges)
 
 ## Usage
 
@@ -26,14 +26,6 @@ The following command checks the TypeScript code for linting errors:
 
 ```bash
 yarn run lint
-```
-
-### Security
-
-The following command checks the dependency tree for security vulnerabilities:
-
-```bash
-yarn run check
 ```
 
 ## License
