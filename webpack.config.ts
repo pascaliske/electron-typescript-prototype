@@ -70,18 +70,17 @@ export default (_, argv: any): Configuration => ({
             excludeChunks: ['main'],
             minify: true,
         }),
-        new CopyWebpackPlugin([
-            {
-                from: join('src', 'assets'),
-                to: 'assets',
-            },
-            {
-                from: 'LICENSE.md',
-                to: 'LICENSE.md',
-            },
-        ]),
-        new VisualizerPlugin({
-            filename: './stats.html',
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: join('src', 'assets'),
+                    to: 'assets',
+                },
+                {
+                    from: 'LICENSE.md',
+                    to: 'LICENSE.md',
+                },
+            ]
         }),
     ],
     optimization: {
