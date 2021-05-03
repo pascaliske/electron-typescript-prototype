@@ -5,7 +5,7 @@ import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin'
 import GenerateJsonWebpackPlugin from 'generate-json-webpack-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import CopyWebpackPlugin from 'copy-webpack-plugin'
-import VisualizerPlugin from 'webpack-visualizer-plugin'
+// import VisualizerPlugin from 'webpack-visualizer-plugin'
 import TerserPlugin from 'terser-webpack-plugin'
 import { name, description, version, license, author, repository, bugs, app } from './package.json'
 
@@ -82,6 +82,9 @@ export default (_, argv: any): Configuration => ({
                 },
             ]
         }),
+        // new VisualizerPlugin({
+        //     filename: './stats.html',
+        // }),
     ],
     optimization: {
         minimizer: [

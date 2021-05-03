@@ -28,11 +28,11 @@ export class Notifications {
         notification.show()
 
         return {
-            show$: fromEvent(notification, 'show'),
-            close$: fromEvent(notification, 'close'),
-            action$: fromEvent(notification, 'action'),
-            click$: fromEvent(notification, 'click'),
-            reply$: fromEvent(notification, 'reply'),
+            show$: fromEvent(notification, 'show') as Observable<Event>,
+            close$: fromEvent(notification, 'close') as Observable<Event>,
+            action$: fromEvent(notification, 'action') as Observable<Event>,
+            click$: fromEvent(notification, 'click') as Observable<Event>,
+            reply$: fromEvent(notification, 'reply') as Observable<Event>,
             close: () => notification.close(),
         }
     }
