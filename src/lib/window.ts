@@ -36,6 +36,8 @@ export function createWindow(
             center: true,
             webPreferences: {
                 nodeIntegration: true,
+                contextIsolation: false,
+                enableRemoteModule: true,
             },
         })
 
