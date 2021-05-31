@@ -29,12 +29,14 @@ export class Application {
      * @returns - An {@link Observable} of an simple {@link Event}.
      */
     public get quit$(): Observable<Event> {
-        return fromEvent<Event>(app, 'quit').pipe(
+        const quit$ = fromEvent(app, 'quit').pipe(
             first(),
             tap(() => {
                 this.dispatcher.shutdown()
             }),
         )
+
+        return quit$ as Observable<Event>
     }
 
     /**
@@ -58,7 +60,7 @@ export class Application {
 
                 this.navigations.setup()
 
-                fromEvent<Event>(app, 'window-all-closed')
+                fromEvent(app, 'window-all-closed')
                     .pipe(takeUntil(this.quit$))
                     .subscribe(() => {
                         app.quit()
