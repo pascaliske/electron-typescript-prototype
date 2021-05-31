@@ -1,3 +1,4 @@
+import 'reflect-metadata'
 import { Container } from 'typedi'
 import { Dispatcher } from 'services/dispatcher'
 import { Actions } from 'models/actions'
