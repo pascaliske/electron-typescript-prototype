@@ -43,7 +43,7 @@
     "@commitlint/cli": "^12.1.1",
     "@commitlint/config-conventional": "^12.1.1",
     "@pascaliske/prettier-config": "^1.1.1",
-    "@pascaliske/tsconfig": "^1.0.5",
+    "@pascaliske/tsconfig": "^1.0.6",
     "@types/lodash-es": "^4.17.4",
     "@types/node": "^15.0.1",
     "@types/webpack": "^5.28.0",
