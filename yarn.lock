@@ -279,10 +279,10 @@
   resolved "https://registry.yarnpkg.com/@pascaliske/prettier-config/-/prettier-config-1.1.1.tgz#69297e36c7f735b446a0fbde4e0567254186d4c2"
   integrity sha512-S8yr8oTBakOYu5aLRD9F/RtQq0i/8jVJ22iJKe5ow3cYs2su4maF16HlDaIxm01dTfnUB0/jaVcAXlOmwF004A==
 
-"@pascaliske/tsconfig@^1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@pascaliske/tsconfig/-/tsconfig-1.0.5.tgz#f220889ea651104fb3e38e32865f55d6e2959059"
-  integrity sha512-XNWay16kStpr7nSVFDyB/LBVaALBdKb2AQmj55d3Z2d4pN6esuxCm367MFHGBcmsXhFPvQzx8uqDpZUhVAm7/w==
+"@pascaliske/tsconfig@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@pascaliske/tsconfig/-/tsconfig-1.0.6.tgz#9a4a99f6ee44b5df548e6b9da4a69aa0278743b2"
+  integrity sha512-zkHui7NyprhAaaQWRppWXxQfkIFZu+WyhQYlQt9W95ganFyUWCJdaXHNhInmy5NkuD3hoRukGiFLRVxyFHJrKg==
 
 "@phenomnomnominal/tsquery@^4.0.0":
   version "4.0.0"
