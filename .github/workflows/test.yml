@@ -1,8 +1,8 @@
-name: Build app
+name: Test app
 on: [push]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
       # checkout
