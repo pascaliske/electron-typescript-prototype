@@ -48,7 +48,7 @@
     "@types/node": "^15.0.1",
     "@types/webpack": "^5.28.0",
     "clean-webpack-plugin": "^4.0.0",
-    "copy-webpack-plugin": "^8.1.1",
+    "copy-webpack-plugin": "^10.0.0",
     "electron-packager": "^15.2.0",
     "generate-json-webpack-plugin": "^2.0.0",
     "html-webpack-plugin": "^5.5.0",
