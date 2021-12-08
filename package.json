@@ -47,7 +47,7 @@
     "@types/lodash-es": "^4.17.4",
     "@types/node": "^15.0.1",
     "@types/webpack": "^5.28.0",
-    "clean-webpack-plugin": "^3.0.0",
+    "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^8.1.1",
     "electron-packager": "^15.2.0",
     "generate-json-webpack-plugin": "^2.0.0",
