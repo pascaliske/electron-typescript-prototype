@@ -59,7 +59,7 @@
     "standard-changelog": "^2.0.27",
     "terser-webpack-plugin": "^5.3.3",
     "ts-loader": "^9.3.0",
-    "ts-node": "^10.8.0",
+    "ts-node": "^10.8.1",
     "tsconfig-paths-webpack-plugin": "^3.5.2",
     "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",
