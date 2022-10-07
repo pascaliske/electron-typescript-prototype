@@ -30,7 +30,7 @@
   "private": true,
   "prettier": "@pascaliske/prettier-config",
   "dependencies": {
-    "electron": "^13.6.6",
+    "electron": "^21.1.0",
     "electron-util": "^0.17.2",
     "is-electron-renderer": "^2.0.1",
     "lodash-es": "^4.17.21",
