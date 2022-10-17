@@ -45,7 +45,7 @@
     "@pascaliske/prettier-config": "^1.2.0",
     "@pascaliske/tsconfig": "^1.0.7",
     "@types/lodash-es": "^4.17.6",
-    "@types/node": "^18.8.5",
+    "@types/node": "^18.11.0",
     "@types/webpack": "^5.28.0",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^11.0.0",
