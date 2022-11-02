@@ -1760,10 +1760,10 @@ electron-is-dev@^1.1.0:
   resolved "https://registry.yarnpkg.com/electron-is-dev/-/electron-is-dev-1.1.0.tgz#b15a2a600bdc48a51a857d460e05f15b19a2522c"
   integrity sha512-Z1qA/1oHNowGtSBIcWk0pcLEqYT/j+13xUw/MYOrBUOL4X7VN0i0KCTf5SqyvMPmW5pSPKbo28wkxMxzZ20YnQ==
 
-electron-packager@^17.1.0:
-  version "17.1.0"
-  resolved "https://registry.yarnpkg.com/electron-packager/-/electron-packager-17.1.0.tgz#e9653aa57dc523cdb3e0de7ec1a8e0112a1befec"
-  integrity sha512-60TBoutfZuAcfJJL1IVWXDZnZ+Yn88HX3UhOLhHbdB/DKA8RAfwXUhSmsWWozh118gbqYRG/WEk9aDL1xVSMKQ==
+electron-packager@^17.1.1:
+  version "17.1.1"
+  resolved "https://registry.yarnpkg.com/electron-packager/-/electron-packager-17.1.1.tgz#f156fc63d3a66f4e902e4b42992550a172982d59"
+  integrity sha512-r1NDtlajsq7gf2EXgjRfblCVPquvD2yeg+6XGErOKblvxOpDi0iulZLVhgYDP4AEF1P5/HgbX/vwjlkEv7PEIQ==
   dependencies:
     "@electron/asar" "^3.2.1"
     "@electron/get" "^2.0.0"
